@@ -14,7 +14,7 @@ import {
 import { ErrorBoundary } from 'solid-start/error-boundary';
 import { Suspense } from 'solid-js';
 import { QueryProvider } from '@prpc/solid';
-import Navbar from './components/Navbar/Navbar';
+import { Navbar } from '~/components/Navbar';
 
 export default function Root() {
   return (

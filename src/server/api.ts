@@ -1,18 +1,15 @@
 import { query$ } from '@prpc/solid';
 
+const sleep = async (ms: number) =>
+  new Promise<void>((resolve) => setTimeout(() => resolve(), ms));
+
 export const getData = query$({
   key: 'getData',
   queryFn: async () => {
-    const data = await new Promise<string>((res) => {
-      console.log('getting data');
-
-      setTimeout(() => {
-        console.log('resolving');
-        res('The Data!');
-      }, 2000);
-    });
+    console.log('sleeping');
+    await sleep(5000);
 
     console.log('returning data');
-    return data;
+    return 'The Data!';
   },
 });

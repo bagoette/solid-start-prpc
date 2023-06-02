@@ -1,4 +1,4 @@
-import { createEffect } from 'solid-js';
+import { Match, Switch, createEffect } from 'solid-js';
 import { getData } from '~/server/api';
 
 export default function Home() {
@@ -9,8 +9,13 @@ export default function Home() {
   });
 
   return (
-    <div class='flex flex-col w-full h-full justify-center items-center'>
+    <div class='flex h-full w-full flex-col items-center justify-center'>
       <div>Home</div>
+      {/* <Switch fallback={<div>...Loading Data...</div>}>
+        <Match when={data.isSuccess}>
+          <div>Data: {data.data}</div>
+        </Match>
+      </Switch> */}
     </div>
   );
 }
