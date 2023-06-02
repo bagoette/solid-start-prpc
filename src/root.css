@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nav-height: 64px;
+}
+
+body {
+  height: 100svh;
+  @apply font-roboto dark:bg-[#333] dark:text-white;
+}
