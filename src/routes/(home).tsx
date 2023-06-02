@@ -1,21 +1,20 @@
-import { Match, Switch, createEffect } from 'solid-js';
+import { Show, createEffect } from 'solid-js';
 import { getData } from '~/server/api';
 
 export default function Home() {
   const data = getData(undefined);
 
   createEffect(() => {
-    console.log('data', data.data);
+    console.log('data', data);
   });
 
   return (
     <div class='flex h-full w-full flex-col items-center justify-center'>
       <div>Home</div>
-      {/* <Switch fallback={<div>...Loading Data...</div>}>
-        <Match when={data.isSuccess}>
-          <div>Data: {data.data}</div>
-        </Match>
-      </Switch> */}
+
+      {/* <Show when={data.isSuccess} fallback={<div>...Loading Data...</div>}>
+        <div>Data: {data.data}</div>
+      </Show> */}
     </div>
   );
 }

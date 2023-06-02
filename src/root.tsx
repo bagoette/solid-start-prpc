@@ -14,6 +14,7 @@ import {
 import { ErrorBoundary } from 'solid-start/error-boundary';
 import { Suspense } from 'solid-js';
 import { QueryProvider } from '@prpc/solid';
+
 import { Navbar } from '~/components/Navbar';
 
 export default function Root() {
@@ -34,7 +35,14 @@ export default function Root() {
         />
       </Head>
       <Body>
-        <ErrorBoundary fallback={() => <div>...Error...</div>}>
+        <ErrorBoundary
+          fallback={(e, reset) => (
+            <>
+              <div>Error: {e}</div>
+              <button onClick={reset}>Reset</button>
+            </>
+          )}
+        >
           <QueryProvider>
             <Suspense>
               <Routes>
