@@ -12,9 +12,7 @@
     "@solidjs/router": "^0.8.2",
     "@tanstack/solid-query": "^5.0.0-alpha.48",
     "node-fetch": "^3.0.0",
-    "solid-app-router": "^0.3.2",
     "solid-js": "^1.7.6",
-    "solid-meta": "^0.27.3",
     "solid-start": "^0.2.26",
     "zod": "^3.21.4"
   },
