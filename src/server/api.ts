@@ -7,7 +7,7 @@ export const getData = query$({
   key: 'getData',
   queryFn: async () => {
     console.log('sleeping');
-    await sleep(2000);
+    await sleep(1000);
 
     console.log('returning data');
     return 'The Data!';

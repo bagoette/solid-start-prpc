@@ -5,7 +5,7 @@ export default function Home() {
   const data = getData(undefined);
 
   createEffect(() => {
-    console.log('data', data);
+    console.log('data', data.data);
   });
 
   return (
@@ -14,7 +14,7 @@ export default function Home() {
 
       {/* <Show when={data.isSuccess} fallback={<div>...Loading Data...</div>}>
         <div>Data: {data.data}</div>
-      </Show> */}
+      </Show>* */}
     </div>
   );
 }
